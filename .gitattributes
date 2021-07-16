@@ -1,1 +1,1 @@
-MenuItem.csv filter=lfs diff=lfs merge=lfs -text
+NYPL_Raw_Data/MenuItem.csv filter=lfs diff=lfs merge=lfs -text
