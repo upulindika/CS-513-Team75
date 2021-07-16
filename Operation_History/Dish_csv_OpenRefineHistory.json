@@ -182,6 +182,19 @@
     "description": "Text transform on cells in column highest_price using expression value.toNumber()"
   },
   {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "grel:value.replace(/[@!#()%']/,'')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column name using expression grel:value.replace(/[@!#()%']/,'')"
+  },
+  {
     "op": "core/mass-edit",
     "engineConfig": {
       "facets": [
@@ -190,8 +203,8 @@
           "name": "name",
           "expression": "grel:facetCount(value, \"value\", \"name\")",
           "columnName": "name",
-          "from": 3.94,
-          "to": 4.02,
+          "from": 2.16,
+          "to": 7.02,
           "selectNumeric": true,
           "selectNonNumeric": true,
           "selectBlank": true,
@@ -205,27 +218,1124 @@
     "edits": [
       {
         "from": [
-          "Lobster Salad",
-          "Lobster salad"
+          "Bass Ale Dogs Head",
+          "Bass Ale, Dogs Head",
+          "Bass, dogs head ale"
         ],
         "fromBlank": false,
         "fromError": false,
-        "to": "Lobster Salad"
+        "to": "Bass Ale Dogs Head"
+      },
+      {
+        "from": [
+          "G H Mumms Extra Dry",
+          "G H MUMMS EXTRA DRY",
+          "G. H. Mumms Extra Dry"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "G H Mumms Extra Dry"
+      },
+      {
+        "from": [
+          "Bass Ale, White Label",
+          "Bass Ale White Label",
+          "Bass Ale, white label"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bass Ale, White Label"
+      },
+      {
+        "from": [
+          "Moet & Chandon White Seal",
+          "Moet & Chandon, White Seal",
+          "White Seal Moet & Chandon"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Moet & Chandon White Seal"
+      },
+      {
+        "from": [
+          "CLAMS: LITTLE NECKS",
+          "Clams: Little Necks",
+          "Little Necks clams"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CLAMS: LITTLE NECKS"
+      },
+      {
+        "from": [
+          "Roquefort per person",
+          "Roquefort, per person"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Roquefort per person"
+      },
+      {
+        "from": [
+          "Hot roast beef sandwich",
+          "Hot Roast Beef Sandwich"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hot roast beef sandwich"
+      },
+      {
+        "from": [
+          "Carstairs Whiskey",
+          "Carstairs whiskey"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Carstairs Whiskey"
+      },
+      {
+        "from": [
+          "Cream Cheese",
+          "Cream cheese"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cream Cheese"
+      },
+      {
+        "from": [
+          "Ham Sandwich",
+          "Ham sandwich"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ham Sandwich"
+      },
+      {
+        "from": [
+          "Vanilla Ice Cream",
+          "Vanilla ice cream"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Vanilla Ice Cream"
+      },
+      {
+        "from": [
+          "American Cheese",
+          "American cheese"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American Cheese"
+      },
+      {
+        "from": [
+          "CHEESE, PER PERSON",
+          "Cheese, per person"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHEESE, PER PERSON"
+      },
+      {
+        "from": [
+          "OBrien Potatoes",
+          "Potatoes OBrien"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OBrien Potatoes"
+      },
+      {
+        "from": [
+          "Boiled Potatoes",
+          "Potatoes Boiled"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Boiled Potatoes"
+      },
+      {
+        "from": [
+          "Sweet Potatoes",
+          "Sweet potatoes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sweet Potatoes"
+      },
+      {
+        "from": [
+          "Ginger Ale C. & C.",
+          "Ginger Ale, C. & C."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ginger Ale C. & C."
+      },
+      {
+        "from": [
+          "Apple Pie",
+          "Apple pie"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Apple Pie"
+      },
+      {
+        "from": [
+          "Fried Frogs Legs",
+          "Frogs legs, fried"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fried Frogs Legs"
+      },
+      {
+        "from": [
+          "Potatoes Hashed in Cream",
+          "Hashed potatoes in cream"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Potatoes Hashed in Cream"
+      },
+      {
+        "from": [
+          "Apricot Brandy",
+          "Apricot brandy"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Apricot Brandy"
+      },
+      {
+        "from": [
+          "Petits Fours",
+          "Petits fours"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Petits Fours"
+      },
+      {
+        "from": [
+          "Endive Salad",
+          "Endive salad"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Endive Salad"
+      },
+      {
+        "from": [
+          "Lobster salad",
+          "Lobster Salad"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lobster salad"
+      },
+      {
+        "from": [
+          "2 Boiled Eggs",
+          "Boiled eggs 2"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "2 Boiled Eggs"
+      },
+      {
+        "from": [
+          "Sirloin Steak with Mushrooms",
+          "Sirloin steak with mushrooms"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sirloin Steak with Mushrooms"
+      },
+      {
+        "from": [
+          "Au Gratin Potatoes",
+          "Potatoes Au Gratin"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Au Gratin Potatoes"
+      },
+      {
+        "from": [
+          "Cold Roast Beef",
+          "Cold Roast beef"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cold Roast Beef"
+      },
+      {
+        "from": [
+          "OYSTERS: Bluepoints",
+          "Oysters: Bluepoints"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OYSTERS: Bluepoints"
+      },
+      {
+        "from": [
+          "Eggs, scrambled",
+          "Scrambled eggs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Eggs, scrambled"
+      },
+      {
+        "from": [
+          "Pigs Feet",
+          "Pigs feet"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pigs Feet"
+      },
+      {
+        "from": [
+          "Lyonnaise Potatoes",
+          "Potatoes Lyonnaise"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lyonnaise Potatoes"
+      },
+      {
+        "from": [
+          "Tongue Sandwich",
+          "Tongue sandwich"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tongue Sandwich"
+      },
+      {
+        "from": [
+          "Celery",
+          "CELERY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Celery"
+      },
+      {
+        "from": [
+          "Celeri",
+          "Céleri"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Celeri"
+      },
+      {
+        "from": [
+          "Cold Lambs Tongues",
+          "Cold: Lambs Tongues"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cold Lambs Tongues"
+      },
+      {
+        "from": [
+          "McLarens Cheese",
+          "McLarens cheese"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "McLarens Cheese"
+      },
+      {
+        "from": [
+          "Pistache ice cream",
+          "Pistache Ice Cream"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pistache ice cream"
+      },
+      {
+        "from": [
+          "Neapolitan Ice Cream",
+          "Neapolitan ice cream"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Neapolitan Ice Cream"
+      },
+      {
+        "from": [
+          "Chicken sandwich",
+          "Chicken Sandwich"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chicken sandwich"
+      },
+      {
+        "from": [
+          "Gin Gordons",
+          "Gordons Gin"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gin Gordons"
+      },
+      {
+        "from": [
+          "Club Sandwich",
+          "Club sandwich"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Club Sandwich"
+      },
+      {
+        "from": [
+          "Grape fruit half",
+          "Grape Fruit, Half"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grape fruit half"
+      },
+      {
+        "from": [
+          "French fried potatoes",
+          "Potatoes: French fried"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French fried potatoes"
+      },
+      {
+        "from": [
+          "Frogs Legs Saute Meuniere",
+          "Frogs Legs Saute, Meuniere"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Frogs Legs Saute Meuniere"
+      },
+      {
+        "from": [
+          "Corned Beef Sandwich",
+          "Corned beef sandwich"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Corned Beef Sandwich"
+      },
+      {
+        "from": [
+          "Pommery Sec Champagne",
+          "Pommery Sec champagne"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pommery Sec Champagne"
+      },
+      {
+        "from": [
+          "Swiss cheese",
+          "Swiss Cheese"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss cheese"
+      },
+      {
+        "from": [
+          "Oyster Stew",
+          "Oyster stew"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Oyster Stew"
+      },
+      {
+        "from": [
+          "Roast Beef Sandwich",
+          "Roast beef sandwich"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Roast Beef Sandwich"
+      },
+      {
+        "from": [
+          "Creme de Menthe, White",
+          "Creme de Menthe, white"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Creme de Menthe, White"
+      },
+      {
+        "from": [
+          "Crab Meat salad",
+          "Crab meat salad"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Crab Meat salad"
       }
     ],
     "description": "Mass edit cells in column name"
   },
   {
-    "op": "core/text-transform",
+    "op": "core/mass-edit",
     "engineConfig": {
-      "facets": [],
+      "facets": [
+        {
+          "type": "range",
+          "name": "name",
+          "expression": "grel:facetCount(value, \"value\", \"name\")",
+          "columnName": "name",
+          "from": 4.16,
+          "to": 9.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
       "mode": "row-based"
     },
     "columnName": "name",
-    "expression": "grel:value.replace(/[@!#()%']/,'')",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Text transform on cells in column name using expression grel:value.replace(/[@!#()%']/,'')"
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Celery",
+          "Celeri"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Celery"
+      }
+    ],
+    "description": "Mass edit cells in column name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "name",
+          "expression": "grel:facetCount(value, \"value\", \"name\")",
+          "columnName": "name",
+          "from": 2.16,
+          "to": 14,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Blue Points",
+          "Bluepoints"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Blue Points"
+      },
+      {
+        "from": [
+          "Grape fruit half",
+          "Grapefruit Half"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grape fruit half"
+      },
+      {
+        "from": [
+          "G H Mumms Extra Dry",
+          "G.H. Mumms Extra Dry"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "G H Mumms Extra Dry"
+      }
+    ],
+    "description": "Mass edit cells in column name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "name",
+          "expression": "grel:facetCount(value, \"value\", \"name\")",
+          "columnName": "name",
+          "from": 3,
+          "to": 17,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Bread and Butter",
+          "Bread and Butter per person"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bread and Butter"
+      },
+      {
+        "from": [
+          "Tea",
+          "Tee"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tea"
+      },
+      {
+        "from": [
+          "Cafe",
+          "Coffee"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Coffee"
+      },
+      {
+        "from": [
+          "Pickled Lambs Tongue",
+          "Pickled Lambs Tongues"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pickled Lambs Tongue"
+      },
+      {
+        "from": [
+          "Calfs Liver",
+          "Calves Liver"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Calfs Liver"
+      },
+      {
+        "from": [
+          "Meyers Jamaica Rum",
+          "Myers Jamaica Rum"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Meyers Jamaica Rum"
+      },
+      {
+        "from": [
+          "Mongol soup",
+          "Mongole soup"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mongol soup"
+      }
+    ],
+    "description": "Mass edit cells in column name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "name",
+          "expression": "grel:facetCount(value, \"value\", \"name\")",
+          "columnName": "name",
+          "from": 3,
+          "to": 17,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Calfs Liver and Bacon",
+          "Calves Liver and Bacon"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Calfs Liver and Bacon"
+      }
+    ],
+    "description": "Mass edit cells in column name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "name",
+          "expression": "grel:facetCount(value, \"value\", \"name\")",
+          "columnName": "name",
+          "from": 3,
+          "to": 17,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "G H Mumms Extra Dry",
+          "G. H. Mumm & Co. Extra Dry",
+          "G. H. Mumms Extra Dry Champagne"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "G H Mumms Extra Dry"
+      },
+      {
+        "from": [
+          "Boiled Potatoes",
+          "Boiled potato"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Boiled Potatoes"
+      },
+      {
+        "from": [
+          "Lambs Tongue",
+          "Lambs Tongues"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lambs Tongue"
+      }
+    ],
+    "description": "Mass edit cells in column name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "name",
+          "expression": "value",
+          "columnName": "name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Clam broth in cup",
+                "l": "Clam broth in cup"
+              }
+            },
+            {
+              "v": {
+                "v": "Clam broth cup",
+                "l": "Clam broth cup"
+              }
+            },
+            {
+              "v": {
+                "v": "Clam Broth",
+                "l": "Clam Broth"
+              }
+            },
+            {
+              "v": {
+                "v": "Clam Broth cold",
+                "l": "Clam Broth cold"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "name",
+          "expression": "value",
+          "columnName": "name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Clam broth in cup",
+                "l": "Clam broth in cup"
+              }
+            },
+            {
+              "v": {
+                "v": "Clam broth cup",
+                "l": "Clam broth cup"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Clam broth cup",
+          "Clam broth in cup"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Clam broth cup"
+      }
+    ],
+    "description": "Mass edit cells in column name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "name",
+          "expression": "grel:facetCount(value, \"value\", \"name\")",
+          "columnName": "name",
+          "from": 3,
+          "to": 17,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Coates Plymouth",
+          "Coates Plymouth gin"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Coates Plymouth"
+      },
+      {
+        "from": [
+          "Cooks Imperial",
+          "Cooks Imperial Champagne"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cooks Imperial"
+      }
+    ],
+    "description": "Mass edit cells in column name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "name",
+          "expression": "value",
+          "columnName": "name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Calfs Liver and Bacon",
+                "l": "Calfs Liver and Bacon"
+              }
+            },
+            {
+              "v": {
+                "v": "Calfs Liver with Bacon",
+                "l": "Calfs Liver with Bacon"
+              }
+            },
+            {
+              "v": {
+                "v": "Calfs Liver",
+                "l": "Calfs Liver"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "name",
+          "expression": "value",
+          "columnName": "name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Calfs Liver and Bacon",
+                "l": "Calfs Liver and Bacon"
+              }
+            },
+            {
+              "v": {
+                "v": "Calfs Liver with Bacon",
+                "l": "Calfs Liver with Bacon"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Calfs Liver and Bacon",
+          "Calfs Liver with Bacon"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Calfs Liver and Bacon"
+      }
+    ],
+    "description": "Mass edit cells in column name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "name",
+          "expression": "value",
+          "columnName": "name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Moet & Chandon White Seal",
+                "l": "Moet & Chandon White Seal"
+              }
+            },
+            {
+              "v": {
+                "v": "Moet & Chandons White Seal",
+                "l": "Moet & Chandons White Seal"
+              }
+            },
+            {
+              "v": {
+                "v": "Moet & Chandon, Imperial Crown Brut",
+                "l": "Moet & Chandon, Imperial Crown Brut"
+              }
+            },
+            {
+              "v": {
+                "v": "Moet & Chandon, White Seal Very Dry",
+                "l": "Moet & Chandon, White Seal Very Dry"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "name",
+          "expression": "value",
+          "columnName": "name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Moet & Chandon White Seal",
+                "l": "Moet & Chandon White Seal"
+              }
+            },
+            {
+              "v": {
+                "v": "Moet & Chandons White Seal",
+                "l": "Moet & Chandons White Seal"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Moet & Chandon White Seal",
+          "Moet & Chandons White Seal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Moet & Chandon White Seal"
+      }
+    ],
+    "description": "Mass edit cells in column name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "name",
+          "expression": "value",
+          "columnName": "name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Frogs Legs, Poulette",
+                "l": "Frogs Legs, Poulette"
+              }
+            },
+            {
+              "v": {
+                "v": "Frogs legs a la Poulette",
+                "l": "Frogs legs a la Poulette"
+              }
+            },
+            {
+              "v": {
+                "v": "Frogs Legs Saute Meuniere",
+                "l": "Frogs Legs Saute Meuniere"
+              }
+            },
+            {
+              "v": {
+                "v": "Frogs Legs Saute",
+                "l": "Frogs Legs Saute"
+              }
+            },
+            {
+              "v": {
+                "v": "Frogs Legs, Creole",
+                "l": "Frogs Legs, Creole"
+              }
+            },
+            {
+              "v": {
+                "v": "Frogs legs saute, Provencale",
+                "l": "Frogs legs saute, Provencale"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "name",
+          "expression": "value",
+          "columnName": "name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Frogs Legs, Poulette",
+                "l": "Frogs Legs, Poulette"
+              }
+            },
+            {
+              "v": {
+                "v": "Frogs legs a la Poulette",
+                "l": "Frogs legs a la Poulette"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Frogs Legs, Poulette",
+          "Frogs legs a la Poulette"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Frogs Legs, Poulette"
+      }
+    ],
+    "description": "Mass edit cells in column name"
   }
 ]
