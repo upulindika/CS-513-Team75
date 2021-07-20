@@ -1,0 +1,53 @@
+digraph Workflow {
+rankdir=LR
+fontname=Courier; fontsize=18; labelloc=t
+label=DataCleaningNYPL
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; color=white
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Courier]
+OpenRefineCleanMenu [shape=record rankdir=LR label="{{<f0> OpenRefineCleanMenu |<f1> Use Openrefine to clean Menu.csv file}}"];
+OpenRefineCleanMenuItem [shape=record rankdir=LR label="{{<f0> OpenRefineCleanMenuItem |<f1> Use Openrefine to clean MenuItem.csv file}}"];
+OpenRefineCleanMenuPage [shape=record rankdir=LR label="{{<f0> OpenRefineCleanMenuPage |<f1> Use Openrefine to clean MenuPage.csv file}}"];
+OpenRefineCleanDish [shape=record rankdir=LR label="{{<f0> OpenRefineCleanDish |<f1> Use Openrefine to clean Dish.csv file}}"];
+SQLiteDataloaderOperationsMenu [shape=record rankdir=LR label="{{<f0> SQLiteDataloaderOperationsMenu |<f1> Use Sql loading scripts to load ClenedMenu.csv into DB}}"];
+SQLiteDataloaderOperationsMenuItem [shape=record rankdir=LR label="{{<f0> SQLiteDataloaderOperationsMenuItem |<f1> Use Sql loading scripts to load ClenedMenuItem.csv into DB}}"];
+SQLiteDataloaderOperationsMenuPage [shape=record rankdir=LR label="{{<f0> SQLiteDataloaderOperationsMenuPage |<f1> Use Sql loading scripts to load ClenedMenuPage.csv into DB}}"];
+SQLiteDataloaderOperationsDish [shape=record rankdir=LR label="{{<f0> SQLiteDataloaderOperationsDish |<f1> Use Sql loading scripts to load ClenedDish.csv into DB}}"];
+SQLConstraintCheck [shape=record rankdir=LR label="{{<f0> SQLConstraintCheck |<f1> Use Sqlite to check constraints and discard the problematic rows}}"];
+edge[fontname=Helvetica]
+OpenRefineCleanMenu -> SQLiteDataloaderOperationsMenu [label="CleanedMenu.csv"]
+OpenRefineCleanMenuItem -> SQLiteDataloaderOperationsMenuItem [label="CleanedMenuItem.csv"]
+OpenRefineCleanMenuPage -> SQLiteDataloaderOperationsMenuPage [label="CleanedMenuPage.csv"]
+OpenRefineCleanDish -> SQLiteDataloaderOperationsDish [label="CleanedDish.csv"]
+SQLiteDataloaderOperationsMenu -> SQLConstraintCheck [label=Cleaned_Menu]
+SQLiteDataloaderOperationsMenuItem -> SQLConstraintCheck [label=Cleaned_MenuItem]
+SQLiteDataloaderOperationsMenuPage -> SQLConstraintCheck [label=Cleaned_MenuPage]
+SQLiteDataloaderOperationsDish -> SQLConstraintCheck [label=Cleaned_Dish]
+}}
+subgraph cluster_input_ports_group_outer { label=""; color=white
+subgraph cluster_input_ports_group_inner { label=""; color=white
+node[shape=circle style=filled fillcolor="#FFFFFF" peripheries=1 fontname=Courier width=0.2]
+"Menu.csv_input_port" [label=""]
+"MenuItem.csv_input_port" [label=""]
+"MenuPage.csv_input_port" [label=""]
+"Dish.csv_input_port" [label=""]
+}}
+subgraph cluster_output_ports_group_outer { label=""; color=white
+subgraph cluster_output_ports_group_inner { label=""; color=white
+node[shape=circle style=filled fillcolor="#FFFFFF" peripheries=1 fontname=Courier width=0.2]
+final_output_menu_output_port [label=""]
+final_output_menu_item_output_port [label=""]
+final_output_menu_page_output_port [label=""]
+final_output_dish_output_port [label=""]
+}}
+edge[fontname=Helvetica]
+"Menu.csv_input_port" -> OpenRefineCleanMenu [label="Menu.csv"]
+"MenuItem.csv_input_port" -> OpenRefineCleanMenuItem [label="MenuItem.csv"]
+"MenuPage.csv_input_port" -> OpenRefineCleanMenuPage [label="MenuPage.csv"]
+"Dish.csv_input_port" -> OpenRefineCleanDish [label="Dish.csv"]
+edge[fontname=Helvetica]
+SQLConstraintCheck -> final_output_menu_output_port [label=final_output_menu]
+SQLConstraintCheck -> final_output_menu_item_output_port [label=final_output_menu_item]
+SQLConstraintCheck -> final_output_menu_page_output_port [label=final_output_menu_page]
+SQLConstraintCheck -> final_output_dish_output_port [label=final_output_dish]
+}
