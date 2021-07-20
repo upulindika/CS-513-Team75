@@ -1,2 +1,6 @@
 Raw_Dataset/MenuItem.csv filter=lfs diff=lfs merge=lfs -text
 Cleaned_Dataset/MenuItem.csv filter=lfs diff=lfs merge=lfs -text
+Cleaned_Dataset/CleanedMenuPage.csv filter=lfs diff=lfs merge=lfs -text
+Cleaned_Dataset/CleanedDish.csv filter=lfs diff=lfs merge=lfs -text
+Cleaned_Dataset/CleanedMenu.csv filter=lfs diff=lfs merge=lfs -text
+Cleaned_Dataset/CleanedMenuItem.csv filter=lfs diff=lfs merge=lfs -text
