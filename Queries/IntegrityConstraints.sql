@@ -10,8 +10,7 @@ and dish_id <>''
 
 select distinct menu_page_id from cleaned_menuitem where menu_page_id not in (select id from cleaned_menupage)
 
-delete from cleaned_menuitem where dish_id  in (220797,329183,395403)
-or dish_id =''
+delete from cleaned_menuitem where dish_id  in (select dish_id from cleaned_menuitem where dish_id not in (select id from cleaned_dish))
 
 delete from cleaned_menuitem where menu_page_id in (select distinct menu_page_id from cleaned_menuitem where menu_page_id not in (select id from cleaned_menupage))
 
